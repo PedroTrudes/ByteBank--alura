@@ -1,1 +1,26 @@
-<p>extrato works!</p>
+<table>
+  <thead>
+    <th>Valor</th>
+    <th>Destino</th>
+    <th>Data</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transferencia of transferencias">
+      <td>
+        {{transferencia?.valor | currency}}
+      </td>
+      <td>
+        {{transferencia?.destino}}
+      </td>
+      <td>
+        {{transferencia?.data | date: 'short'}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <div *ngFor="let transferencia of transferencias" class="container__extrato">
+  <p>Valor: {{transferencia?.valor}}</p>
+  <p>Destino => {{transferencia?.destino}}</p>
+  <p>DATA : {{transferencia.data}}</p>
+</div> -->
